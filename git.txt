@@ -1,0 +1,19 @@
+git init : tạo reponsitory trên máy local
+git clone: lấy source code trên mạng về
+git pull : đồng bộ từ trên mạng về máy
+git add & git add . : thêm sửa file
+git commit : thêm vào reponsitory
+git push : đồng bộ từ máy lên reponsitory
+git log :
+git status : 
+--> check xem trạng thái file 
+git log -decorate -graph -oneline:
+//Bước 1:
+git init
+git status
+git add <filename>
+git status
+git commit -m <your comment>
+git log
+git remote add origin https://github.com/thai-opps/Cake-shop-PROJECT.git
+git push -u origin master
