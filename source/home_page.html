@@ -12,15 +12,14 @@
   <script src="https://kit.fontawesome.com/9df639a5e3.js" crossorigin="anonymous"></script>
   <title>Cake shop</title>
 </head>
-
 <body>
   <section id="page">
     <header class="page__header">
       <div class="header__banner">
         <div class="banner__social-icon">
-          <a href="https://www.facebook.com/" class="icon__link"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.instagram.com/" class="icon__link"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://twitter.com/" class="icon__link"><i class="fa-brands fa-twitter"></i></a>
+          <a class="icon__link" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+          <a class="icon__link" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a class="icon__link" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
         </div>
         <div class="banner__logo">
           <a class="logo__link" href="home_page.html"><img src="/assets/img/icon/Logo.webp" alt=""></a>
@@ -29,10 +28,47 @@
           <a class="info__link" href="home_page.html">Call Us: +10 783 346 4378</a>
         </div>
       </div>
-      <nav class="header__nav"></nav>
+      <div class="header__nav">
+        <nav class="header__nav--pc">
+          <a class="nav__link" href="#">Home</a>
+          <a class="nav__link" href="#">Cakes</a>
+          <a class="nav__link" href="#">About</a>
+          <div class="blog__dropdown">
+            <button class="blog__btn">Blog</button>
+            <div class="blog__content">
+              <a class="blog__link" href="#">Blog</a>
+              <a class="blog__link" href="#">Blog Details</a>
+              <a class="blog__link" href="#">Blog Element</a>
+            </div>
+          </div>
+          <a class="nav__link" href="#">Contact</a>
+        </nav>
+        <nav class="header__nav--mobile">
+          <button onclick="myFunction()" class="toggle__btn">
+            MENU <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="myDropdown" class="nav__menu">
+            <a class="dropdown__link" href="#">Home</a>
+            <a class="dropdown__link" href="#">Cakes</a>
+            <a class="dropdown__link" href="#">About</a>
+            <div class="sub__dropdown">
+              <a onclick="blogFunction()" class=" blog__btn">
+                <span class="blog__btn--text ">Blog <i class="fa-solid fa-angle-down"></i></span>
+              </a>
+              <div id="blog__dropdown" class="blog__menu">
+                <a class="blog__link" href="#">Blog</a>
+                <a class="blog__link" href="#">Blog Details</a>
+                <a class="blog__link" href="#">Blog Element</a>
+              </div>
+            </div>
+            <a class="dropdown__link" href="#">Contact</a>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page__main"></main>
     <footer class="page__footer"></footer>
   </section>
+  <script src="/assets/js/home_page.js"></script>
 </body>
 </html>

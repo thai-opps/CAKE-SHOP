@@ -1,5 +1,45 @@
+/* setting default */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=Poiret+One&display=swap");
 *{
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+}
+:root{
+  --mauvang:#E5BF4A;
+  --mauden :#0A0A0A;
+  --mauxam: #4c4c4c;
+  --fontJost: "Jost", sans-serif;
+  --fontPoiret: "Poiret One";
+}
+html{
+  font-family: var(--fontJost);
+  font-size: 16px;
+  line-height: 1;
+  font-weight: normal;
+  background: var(--mauden);
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--fontPoiret);
+}
+a{text-decoration: none;}
+/* end setting default */
+#page{
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3,1fr);
+}
+#page > .page__header{
+  grid-area: header;
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+}
+.page__header > .header__banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
