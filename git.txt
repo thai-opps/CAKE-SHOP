@@ -8,12 +8,10 @@ git log :
 git status : 
 --> check xem trạng thái file 
 git log -decorate -graph -oneline:
-//Bước 1:
-git init
-git status
-git add <filename>
-git status
-git commit -m <your comment>
-git log
-git remote add origin https://github.com/thai-opps/Cake-shop-PROJECT.git
-git push -u origin master
+Các bước upload file lên reponsitory :
+ + git clone https://github.com/thai-opps/CAKE-SHOP.git
+ + Bước 1 : gõ lệnh "git status" : xem trạng thái file 
+ + Bước 2: gõ lệnh  "git add ."
+ + Bước 3: gõ lệnh " git commit -m "your comment": thêm vào reponsitory
+ + Bước 4: gõ lệnh " git pull ": đồng bộ về máy
+ + Bước 5: gõ lệnh " git push" : đẩy lển github
