@@ -20,7 +20,7 @@
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1100px;
 }
 
 .slide__caption .slide__title {
