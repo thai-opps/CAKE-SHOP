@@ -46,7 +46,6 @@ section#page {
   grid-template-rows: repeat(3, auto);
 }
 
-/*                                                              HEADER SHARED                        */
 #page>.page__header {
   grid-area: header;
   display: grid;
