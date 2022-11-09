@@ -39,13 +39,67 @@ a {
 section#page {
   display: grid;
   grid-template-areas:
+    "top_section"
     "header"
     "main"
     "footer";
   height: 100vh;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
 }
+#page > .page--top{
+  grid-area: top_section;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.page--top  a{
+  font-size: 18px;
+  color: #fff;
+  margin-right: 25px;
+  transition: all 0.5s ease-in-out 0s;
+}
+.page--top a i{
+  transition: all 0.3s ease-in-out 0s;
+}
+.page--top a:hover i {
+  transform: scale(1.3);
+  color: var(--mauvang);
+}
+.form__search{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.form__search input{
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 500px;
+  margin-right: 10px;
+}
+.srch__btn{
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  cursor: pointer;
+}
+.form__search button{
+  border: 1px solid gray;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+.form__search button:hover{
+  color: var(--mauvang);
+  border-color: var(--mauvang);
 
+}
 #page>.page__header {
   grid-area: header;
   display: grid;
@@ -382,7 +436,7 @@ section#page {
   padding: 100px 0px 50px 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 50px;
 }
 
 .card__section>.card__item {
@@ -403,7 +457,6 @@ section#page {
 .card__item>.group__layer>img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   object-fit: cover;
   transition: all 0.4s ease-out 0s;
 }
@@ -450,7 +503,135 @@ section#page {
   font-size: 20px;
   line-height: 30px;
 }
-
+/* Dat hang */
+.card__item > .card__body > form > p{
+  color: #fff;
+  margin: 10px 0px;
+}
+.form__group{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 20px;
+}
+.form__group > input{
+  border: none;
+  height: 25px;
+  border-radius: 5px;
+  padding: 20px;
+  outline: 1px solid skyblue;
+  background: transparent;
+  color: #fff;
+}
+.fancy {
+  background-color: transparent;
+  border: 2px solid var(--mauvang);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+  cursor: pointer;
+ }
+ 
+ .fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: var(--mauvang);
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+ }
+ .fancy .btn{
+  border: none;
+  outline: none;
+  background-color: transparent;
+ }
+ .fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--mauvang);
+ }
+ 
+ .fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #0A0A0A;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #0A0A0A;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #0A0A0A;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy:hover {
+  color: white;
+  border-radius:5px ;
+  background-color: var(--mauvang);
+ }
+ 
+ .fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+ }
+ 
+ .fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+ }
+ 
+ .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+ }
 /* Contact section */
 .contact__section {
   display: grid;
