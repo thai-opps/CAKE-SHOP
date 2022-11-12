@@ -27,7 +27,20 @@
           <a class="logo__link" href="home_page.html"><img src="../assets/img/icon/Logo.webp" alt=""></a>
         </div>
         <div class="banner__info">
-          <a class="info__link" href="home_page.html">Call Us: +10 783 346 4378</a>
+          <div class="search__group">
+            <a onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <form id="formID" action="#">
+              <input type="search" placeholder="Search keyword">
+              <button type="submit">Search</button>
+            </form>
+          </div>
+          <div class="user__account">
+            <a href="login_page.html"><i class="fa-regular fa-user"></i></a>
+          </div>
+          <div class="shopping__cart">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+          <!-- <a class="info__link" href="home_page.html">Call Us: +10 783 346 4378</a> -->
         </div>
       </div>
       <div class="header__nav">
@@ -38,28 +51,6 @@
           <a class="nav__link" href="blog_page.html">BLOG</a>
           <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
-        <!-- nav mobile display -->
-        <!-- <nav class="header__nav--mobile">
-          <button onclick=" menuClick()" class="toggle__btn">
-            MENU <i class="fa-solid fa-bars"></i>
-          
-          <div id="myDropdown" class="nav__menu">
-            <a class="dropdown__link" href="#">Home</a>
-            <a class="dropdown__link" href="#">Cakes</a>
-            <a class="dropdown__link" href="#">About</a>
-            <div class="sub__dropdown">
-              <a onclick="blogFunction()" class=" blog__btn">
-                <span class="blog__btn--text ">Blog <i class="fa-solid fa-angle-down"></i></span>
-              </a>
-              <div id="blog__dropdown" class="blog__menu">
-                <a class="blog__link" href="#">Blog</a>
-                <a class="blog__link" href="#">Blog Details</a>
-                <a class="blog__link" href="#">Blog Element</a>
-              </div>
-            </div>
-            <a class="dropdown__link" href="#">Contact</a>
-          </div>
-        </nav> -->
       </div>
     </header>
     <main class="page__main">
@@ -266,11 +257,11 @@
           <img src="../assets/img/icon/Logo.webp" alt="">
         </div>
         <nav class="header__nav--pc">
-          <a class="nav__link" href="#">Home</a>
-          <a class="nav__link" href="#">Cakes</a>
-          <a class="nav__link" href="#">About</a>
-          <a class="nav__link" href="#">Blog</a>
-          <a class="nav__link" href="#">Contact</a>
+          <a class="nav__link" href="home_page.html">Home</a>
+          <a class="nav__link" href="cakes_page.html">Cakes</a>
+          <a class="nav__link" href="about_page.html">About</a>
+          <a class="nav__link" href="blog_page.html">Blog</a>
+          <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
       </section>
       <!-- footer contact info -->

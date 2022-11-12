@@ -14,19 +14,6 @@
 </head>
 <body>
   <section id="page">
-    <section class="page--top">
-      <form class="form__search" action="#" method="post">
-        <input type="search" placeholder="Search ">
-        <i class="fa fa-search srch__btn" aria-hidden="true"></i>
-        <button type="submit">Search</button>
-      </form>
-      <div class="user__account--info">
-        <a onclick="mySearch()" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-        <a class="user__login" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
-        <a class="shopping__cart" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-      </div>
-    </section>
-
     <header class="page__header">
       <div class="header__banner">
         <div class="banner__social-icon">
@@ -38,7 +25,20 @@
           <a class="logo__link" href="home_page.html"><img src="../assets/img/icon/Logo.webp" alt=""></a>
         </div>
         <div class="banner__info">
-          <a class="info__link" href="home_page.html">Call Us: +10 783 346 4378</a>
+          <div class="search__group">
+            <a onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <form id="formID" action="#">
+              <input type="search" placeholder="Search keyword">
+              <button type="submit">Search</button>
+            </form>
+          </div>
+          <div class="user__account">
+            <a href="login_page.html"><i class="fa-regular fa-user"></i></a>
+          </div>
+          <div class="shopping__cart">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+          <!-- <a class="info__link" href="home_page.html">Call Us: +10 783 346 4378</a> -->
         </div>
       </div>
       <div class="header__nav">
@@ -370,11 +370,11 @@
           <img src="../assets/img/icon/Logo.webp" alt="">
         </div>
         <nav class="header__nav--pc">
-          <a class="nav__link" href="#">Home</a>
-          <a class="nav__link" href="#">Cakes</a>
-          <a class="nav__link" href="#">About</a>
-          <a class="nav__link" href="#">Blog</a>
-          <a class="nav__link" href="#">Contact</a>
+          <a class="nav__link" href="home_page.html">Home</a>
+          <a class="nav__link" href="cakes_page.html">Cakes</a>
+          <a class="nav__link" href="about_page.html">About</a>
+          <a class="nav__link" href="blog_page.html">Blog</a>
+          <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
       </section>
       <!-- footer contact info -->
@@ -427,6 +427,6 @@
     <!-- END FOOTER -->
   </section>
 
-  <script async src="../assets/js/cake_page.js"></script>
+  <script async src="../assets/js/home_page.js"></script>
 </body>
 </html>
