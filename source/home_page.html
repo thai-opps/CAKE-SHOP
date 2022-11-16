@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,12 @@
   <link rel="shortcut icon" type="img/png" href="../assets/img/icon/favicon.webp">
   <!-- css trang chu -->
   <link rel="stylesheet" href="../assets/css/home_page.css">
+  <link rel="stylesheet" href="../assets/css/home_res.css">
   <!-- font Awesome -->
   <script src="https://kit.fontawesome.com/9df639a5e3.js" crossorigin="anonymous"></script>
   <title>Cake shop</title>
 </head>
+
 <body>
   <!-- PAGE WRAPPER  -->
   <section id="page">
@@ -31,13 +34,7 @@
         </div>
         <!-- banner info right -->
         <div class="banner__info">
-          <div class="search__group">
-            <a onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <form id="formID" action="#">
-              <input type="search" placeholder="Search keyword">
-              <button type="submit">Search</button>
-            </form>
-          </div>
+          <a onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
           <div class="user__account">
             <a href="login_page.html"><i class="fa-regular fa-user"></i></a>
           </div>
@@ -46,6 +43,12 @@
           </div>
           <!-- <a class="info__link" href="home_page.html">Call Us: +10 783 346 4378</a> -->
         </div>
+      </div>
+      <div class="header__form-search">
+        <form id="formID" action="#">
+          <input type="search" placeholder="Search keyword">
+          <button type="submit">Search</button>
+        </form>
       </div>
       <!-- navigation -->
       <div class="header__nav">
@@ -58,27 +61,27 @@
           <a class="nav__link" href="blog_page.html">BLOG</a>
           <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
-        <!-- nav for device width < desktop -->
-        <nav class="header__nav--mobile">
-          <!-- button click to display navbar collapse  -->
-          <button onclick="menuClick()" class ="toggle__btn">
-            MENU <i class="fa-solid fa-bars"></i>
-          </button>
-          <!-- dropdown menu -->
-          <div id="myDropdown" class="nav__menu">
-            <!-- dropdown links -->
-            <a class="dropdown__link" href="#">Home</a>
-            <a class="dropdown__link" href="#">Cakes</a>
-            <a class="dropdown__link" href="#">About</a>
-            <a class="dropdown__link" href="#">Blog</a>
-            <a class="dropdown__link" href="#">Contact</a>
+        <!-- nav for width <= 768px -->
+        <nav class="header__nav--respon">
+          <div class="menu__btn">
+            <a onclick="showMenu()">
+              <span>MENU</span>
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+          <div id="menuBTN" class="menu__dropdown">
+            <a class="dropdown__link" href="home_page.html">Home</a>
+            <a class="dropdown__link" href="cakes_page.html">Cakes</a>
+            <a class="dropdown__link" href="about_page.html">About</a>
+            <a class="dropdown__link" href="blog_page.html">Blog</a>
+            <a class="dropdown__link" href="contact_page.html">Contact</a>
           </div>
         </nav>
       </div>
-    </header>     <!-- END HEADER-->
+    </header>
+    <!-- END HEADER-->
     <!-- MAIN AREA-->
     <main class="page__main">
-      <!-- slide section -->
       <section class="slide__section">
         <div class="slide__caption">
           <div class="slide__animate">
@@ -87,9 +90,7 @@
           </div>
         </div>
       </section>
-      <!--container group -->
-      <div class="container">
-        <!-- about section -->
+      <!-- <div class="container">
         <section class="about__section">
           <div class="about__caption">
             <h2>This is Schilers. Awesome Food Theme. Purchase it and eat Burgers.</h2>
@@ -99,13 +100,17 @@
               <h2>This is Schilers. Awesome Food Theme. <br>
                 Purchase it and eat Burgers.
               </h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              dolor in reprehen derit in voluptate velit esse cillum.
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore
+                magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute
+                dolor in reprehen derit in voluptate velit esse cillum.
               </p>
-              <p> Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute dolor in reprehen derit
-              in voluptate velit esse c illum.
+              <p> Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam,
+                quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute dolor in
+                reprehen derit
+                in voluptate velit esse c illum.
               </p>
             </div>
             <div class="content__img">
@@ -113,7 +118,6 @@
             </div>
           </div>
         </section>
-        <!-- card cakes section -->
         <section class="card__section">
           <div class="card__item">
             <div class="group__layer">
@@ -146,7 +150,6 @@
             </div>
           </div>
         </section>
-        <!-- video section -->
         <section class="video__section">
           <div class="icon__play">
             <a href="#">
@@ -154,7 +157,6 @@
             </a>
           </div>
         </section>
-        <!-- Customer feedback -->
         <section class="customer__section">
           <div class="customer__caption">
             <h2>Food Lover's Say</h2>
@@ -210,7 +212,6 @@
             </div>
           </div>
         </section>
-        <!-- Blog section -->
         <section class="blog__section">
           <div class="blog__section--top">
             <h2>Our Blog</h2>
@@ -223,7 +224,9 @@
               <img src="../assets/img/home-img/blog__images_1.webp" alt="">
               <div class="blog__content">
                 <h3>Tomato, black olive, feta & anchovy tart ulla mco laboris</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut
+                  aliquip.</p>
                 <div class="blog__btn">
                   <a href="#">LEARN MORE</a>
                 </div>
@@ -233,7 +236,9 @@
               <img src="../assets/img/home-img/blog__images_2.webp" alt="">
               <div class="blog__content">
                 <h3>Tomato, black olive, feta & anchovy tart ulla mco laboris</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut
+                  aliquip.</p>
                 <div class="blog__btn">
                   <a href="#">LEARN MORE</a>
                 </div>
@@ -241,7 +246,6 @@
             </div>
           </div>
         </section>
-        <!-- Contact section -->
         <section class="contact__section">
           <div class="contact__caption">
             <h2>Follow us on Instagram</h2>
@@ -258,10 +262,10 @@
             <img src="../assets/img/home-img/contact__img-3.webp" alt="">
             <img src="../assets/img/home-img/contact__img-4.webp" alt="">
           </div>
-        </section> 
-      </div>
-    </main>       <!--END MAIN-->
-    <!-- FOOTER AREA -->
+        </section>
+      </div> -->
+    </main>
+    <!--END MAIN-->
     <footer class="page__footer">
       <section class="footer__menu">
         <div class="footer__img--logo">
@@ -275,11 +279,11 @@
           <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
       </section>
-      <!-- footer contact info -->
       <section class="footer__contact--info">
         <div class="contact--info-left">
           <div class="contact__des">
-            <p>Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
           <div class="contact__social">
             <div class="social__item">
@@ -314,13 +318,14 @@
           <p>contact@cakeshop.com</p>
         </div>
       </section>
-      <!--  -->
       <section class="footer__license">
-        <p>Copyright ©2022 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="#">Group 10</a></p>
+        <p>Copyright ©2022 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a
+            href="#">Group 10</a></p>
       </section>
-    </footer>     <!--END FOOTER-->
+    </footer>
   </section>
   <!-- SCRIPT -->
   <script async src="../assets/js/home_page.js"></script>
 </body>
+
 </html>
