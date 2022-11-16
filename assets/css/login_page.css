@@ -14,9 +14,8 @@ html{
     height: 100vh;
 }
 body{
-    /* background-color: var(--bodyBackground); */
-    /* background: url('./img/landing_page_background_item1.1ba0ab06cd517c0f1655.png'); */
-    background: url('../img/dangnhap.png') no-repeat;
+    background-color: #3a1f0f !important;
+    background: url('../img/cake-login.png') no-repeat 50% 100%;
     background-size: cover;
 
 }
@@ -24,12 +23,17 @@ body{
     width: 350px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(50%,-50%);
     position: absolute;
     background: linear-gradient(90deg,#5ebbff,#a174ff);;
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
     border-radius: 30px;
     padding: 25px;
+}
+@media only screen and (max-width:992px ){
+    #form_wrapper {
+        transform: translate(-50%,-50%) !important;
+    }
 }
 #form_wrapper > .title_content,#form_wrapper > .sub_content{
     text-align: center;

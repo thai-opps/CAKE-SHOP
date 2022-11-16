@@ -1,3 +1,7 @@
+/*   FILE : home_page.html
+       @IT Lecturer: Chau Thai-B2005731 , thaib2005731@student.ctu.edu.vn
+       @Created : 16 - Nov - 2022  
+*/
 /* setting default */
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=Poiret+One&display=swap");
 *{
@@ -276,7 +280,7 @@ section#page{
 .page__main>.slide__section {
   display: flex;
   height: 700px;
-  background: url("/assets/img/icon/slider-banner.webp");
+  background: url("../img/icon/slider-banner.webp");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;

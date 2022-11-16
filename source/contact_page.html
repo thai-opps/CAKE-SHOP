@@ -1,3 +1,7 @@
+<!--   FILE : contact_page.html
+       @IT Lecturer: Chau Thai-B2005731 , thaib2005731@student.ctu.edu.vn
+       @Created : 16 - Nov - 2022  
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,39 +20,61 @@
 <body>
   <section id="page">
     <header class="page__header">
+      <!-- banner -->
       <div class="header__banner">
+        <!-- banner social icon left -->
         <div class="banner__social-icon">
           <a class="icon__link" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
           <a class="icon__link" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
           <a class="icon__link" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
         </div>
+        <!-- banner social logo image middle -->
         <div class="banner__logo">
           <a class="logo__link" href="home_page.html"><img src="../assets/img/icon/Logo.webp" alt=""></a>
         </div>
+        <!-- banner info right -->
         <div class="banner__info">
-          <div class="search__group">
-            <a onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <form id="formID" action="#">
-              <input type="search" placeholder="Search keyword">
-              <button type="submit">Search</button>
-            </form>
-          </div>
+          <a onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
           <div class="user__account">
             <a href="login_page.html"><i class="fa-regular fa-user"></i></a>
           </div>
           <div class="shopping__cart">
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
           </div>
-          <!-- <a class="info__link" href="home_page.html">Call Us: +10 783 346 4378</a> -->
         </div>
       </div>
+      <div class="header__form-search">
+        <form id="formID" action="#">
+          <input type="search" placeholder="Search keyword">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <!-- navigation -->
       <div class="header__nav">
+        <!-- nav for desktop display -->
         <nav class="header__nav--pc">
+          <!-- nav links -->
           <a class="nav__link" href="home_page.html">Home</a>
           <a class="nav__link" href="cakes_page.html">Cakes</a>
           <a class="nav__link" href="about_page.html">About</a>
           <a class="nav__link" href="blog_page.html">BLOG</a>
-          <a class="nav__link" href="#">Contact</a>
+          <a class="nav__link" href="contact_page.html">Contact</a>
+        </nav>
+        <!-- nav for width <= 768px -->
+        <nav class="header__nav--respon">
+          <div class="menu__btn">
+            <a onclick="showMenu()">
+              <span>MENU</span>
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+          <div id="menuBTN" class="menu__dropdown">
+            <a class="dropdown__link" href="home_page.html">Home</a>
+            <a class="dropdown__link" href="cakes_page.html">Cakes</a>
+            <a class="dropdown__link" href="about_page.html">About</a>
+            <a class="dropdown__link" href="blog_page.html">Blog</a>
+            <a class="dropdown__link" href="contact_page.html">Contact</a>
+          </div>
         </nav>
       </div>
     </header>
