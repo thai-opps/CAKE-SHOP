@@ -1,7 +1,17 @@
 <!--   FILE : about_page.html
-       @IT Lecturer: Chau Thai-B2005731 , thaib2005731@student.ctu.edu.vn
+       @IT Lecturer: Thay Vu Duy Linh
+       Craetor : Chau Thai - B2005731, thaib2005731@student.ctu.edu.vn
        @Created : 16 - Nov - 2022  
- -->
+
+       Tai lieu tham khao :
+       + https://www.w3schools.com/
+       + https://stackoverflow.com/
+       + Tailieu3 - Jon Duckett, 2014- JavaScript and JQuery.Interactive Front-End Web Development
+       + Tailieu2--2017__Web Design with HTML & CSS3 - Comprehensive, 8 edition.pdf
+       + Tailieu1-2018-Learning Web Design _ A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics.pdf
+       + https://css-tricks.com/
+       + Giao trinh CT188 CTU
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +20,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- icon trang web -->
   <link rel="shortcut icon" type="img/png" href="../assets/img/icon/favicon.webp">
-  <!-- css shared-->
+  <!-- css custom-->
   <link rel="stylesheet" href="../assets/css/about_page.css">
-  <link rel="stylesheet" href="../assets/css/about_page.css">
+  <link rel="stylesheet" href="../assets/css/about_respon.css">
   <!-- font Awesome -->
   <script src="https://kit.fontawesome.com/9df639a5e3.js" crossorigin="anonymous"></script>
   <title>About page</title>
@@ -78,17 +88,17 @@
         </nav>
       </div>
     </header>
+    <!-- main  -->
     <main class="page__main">
-      <!-- slide section -->
+      <!-- slide -->
       <section class="slide__section">
         <div class="slide__caption">
           <div class="slide__animate">
             <h1 class="slide__title">About Us</h1>
-            <!-- <a href="#" class="slide__btn">ORDER NOW</a> -->
           </div>
         </div>
       </section>
-      <!--container group -->
+      <!-- container -->
       <div class="container">
         <!-- about section -->
         <section class="about__section">
@@ -121,14 +131,16 @@
                 <i class="fa-regular fa-circle-play"></i>
               </a>
             </div>
-          </section>
-          <!-- Customer feedback -->
-          <section class="customer__section">
+        </section>
+        <!-- customer -->
+        <section class="customer__section">
             <div class="customer__caption">
               <h2>Food Lover's Say</h2>
             </div>
             <div class="customer__group">
+              <!-- customer item 1-->
               <div class="customer__item">
+                <!-- evaluate  -->
                 <div class="customer__evaluate">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -136,14 +148,17 @@
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                 </div>
+                <!-- comment -->
                 <div class="customer__comment">
                   <p>"Consectetur adipiscing elit, sed do eiusmod tempor dunt ulter labore et dolore magna.</p>
                 </div>
+                <!-- info -->
                 <div class="customer__info">
                   <img class="customer__img" src="../assets/img/home-img/customer-1.webp" alt="">
                   <p class="customer__name">Wilma Mumduya</p>
                 </div>
               </div>
+              <!-- customer item 2-->
               <div class="customer__item">
                 <div class="customer__evaluate">
                   <i class="fa-solid fa-star"></i>
@@ -177,16 +192,19 @@
                 </div>
               </div>
             </div>
-          </section>
-          <!-- Blog section -->
-          <section class="blog__section">
+        </section>
+        <!-- blog section -->
+        <section class="blog__section">
+            <!-- caption -->
             <div class="blog__section--top">
               <h2>Our Blog</h2>
               <a href="#">
                 <button>more blog</button>
               </a>
             </div>
+            <!-- blog content -->
             <div class="blog__section--end">
+              <!-- blog item 1 -->
               <div class="blog__item">
                 <img src="../assets/img/home-img/blog__images_1.webp" alt="">
                 <div class="blog__content">
@@ -197,6 +215,7 @@
                   </div>
                 </div>
               </div>
+              <!-- blog item 2 -->
               <div class="blog__item">
                 <img src="../assets/img/home-img/blog__images_2.webp" alt="">
                 <div class="blog__content">
@@ -208,8 +227,8 @@
                 </div>
               </div>
             </div>
-          </section>  
-        <!-- Contact section -->
+        </section>  
+        <!-- contact section -->
         <section class="contact__section">
           <div class="contact__caption"> 
             <h2>Follow us on Instagram</h2>
@@ -229,7 +248,9 @@
         </section> 
       </div>
     </main>
+    <!-- footer -->
     <footer class="page__footer">
+      <!--footer menu  -->
       <section class="footer__menu">
         <div class="footer__img--logo">
           <img src="../assets/img/icon/Logo.webp" alt="">
@@ -242,8 +263,9 @@
           <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
       </section>
-      <!-- footer contact info -->
+      <!-- footer contact info-->
       <section class="footer__contact--info">
+        <!-- left -->
         <div class="contact--info-left">
           <div class="contact__des">
             <p>Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -269,11 +291,13 @@
             </div>
           </div>
         </div>
+        <!-- middle -->
         <div class="contact--info-middle">
           <img src="../assets/img/home-img/location.svg" alt="">
           <h4>Location</h4>
           <p>4736 Poe Lane, HOT SPRINGS, Montana-59845</p>
         </div>
+        <!-- right -->
         <div class="contact--info-right">
           <img src="../assets/img/home-img/phone.svg" alt="">
           <h4>Contact</h4>
@@ -281,12 +305,12 @@
           <p>contact@cakeshop.com</p>
         </div>
       </section>
-      <!--  -->
+      <!-- footer coppy right -->
       <section class="footer__license">
-        <p>Copyright ©2022 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="#">Group 10</a></p>
+        <p>Copyright ©2022 All rights reserved <br> This template is made with <i class="fa-solid fa-heart"></i> by <a href="#">Group 10</a></p>
       </section>
     </footer>
   </section>
-  <script async src="../assets/js/home_page.js"></script>
+  <script src="../assets/js/home_page.js"></script>
 </body>
 </html>

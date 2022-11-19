@@ -1,9 +1,20 @@
 <!--   FILE : cakes_page.html
-       @IT Lecturer: Chau Thai-B2005731 , thaib2005731@student.ctu.edu.vn
+       @IT Lecturer: Thay Vu Duy Linh
+       Craetor : Chau Thai - B2005731, thaib2005731@student.ctu.edu.vn
        @Created : 16 - Nov - 2022  
- -->
+
+       Tai lieu tham khao :
+       + https://www.w3schools.com/
+       + https://stackoverflow.com/
+       + Tailieu3 - Jon Duckett, 2014- JavaScript and JQuery.Interactive Front-End Web Development
+       + Tailieu2--2017__Web Design with HTML & CSS3 - Comprehensive, 8 edition.pdf
+       + Tailieu1-2018-Learning Web Design _ A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics.pdf
+       + https://css-tricks.com/
+       + Giao trinh CT188 CTU
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +28,7 @@
   <script src="https://kit.fontawesome.com/9df639a5e3.js" crossorigin="anonymous"></script>
   <title>Cake page</title>
 </head>
+
 <body>
   <section id="page">
     <header class="page__header">
@@ -28,46 +40,52 @@
           <a class="icon__link" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
           <a class="icon__link" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
         </div>
-        <!-- banner social logo image middle -->
+        <!-- banner lgog -->
         <div class="banner__logo">
           <a class="logo__link" href="home_page.html"><img src="../assets/img/icon/Logo.webp" alt=""></a>
         </div>
         <!-- banner info right -->
         <div class="banner__info">
+          <!-- search button  -->
           <a onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <!-- user account -->
           <div class="user__account">
             <a href="login_page.html"><i class="fa-regular fa-user"></i></a>
           </div>
+          <!-- shopping cart -->
           <div class="shopping__cart">
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
           </div>
         </div>
       </div>
+      <!-- click search btn to display form search -->
       <div class="header__form-search">
         <form id="formID" action="#">
           <input type="search" placeholder="Search keyword">
           <button type="submit">Search</button>
         </form>
       </div>
-      <!-- navigation -->
+      <!-- header navigation -->
       <div class="header__nav">
-        <!-- nav for desktop display -->
+        <!-- large device width -->
         <nav class="header__nav--pc">
-          <!-- nav links -->
           <a class="nav__link" href="home_page.html">Home</a>
           <a class="nav__link" href="cakes_page.html">Cakes</a>
           <a class="nav__link" href="about_page.html">About</a>
           <a class="nav__link" href="blog_page.html">BLOG</a>
           <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
-        <!-- nav for width <= 768px -->
+        <!-- smaill device width -->
         <nav class="header__nav--respon">
+          <!-- menu button -->
           <div class="menu__btn">
+            <!-- click to show menu content -->
             <a onclick="showMenu()">
               <span>MENU</span>
               <i class="fa-solid fa-bars"></i>
             </a>
           </div>
+          <!-- menu content -->
           <div id="menuBTN" class="menu__dropdown">
             <a class="dropdown__link" href="home_page.html">Home</a>
             <a class="dropdown__link" href="cakes_page.html">Cakes</a>
@@ -78,24 +96,23 @@
         </nav>
       </div>
     </header>
+    <!-- MAIN ARE -->
     <main class="page__main">
-      <!-- slide section -->
+      <!-- slide  -->
       <section class="slide__section">
         <div class="slide__caption">
           <div class="slide__animate">
             <h1 class="slide__title">Delicious Cake</h1>
-            <!-- <a href="#" class="slide__btn">ORDER NOW</a> -->
           </div>
         </div>
       </section>
-      <!--container group -->
+      <!-- container to center content -->
       <div class="container">
-        <!-- card slide section -->
         <section class="card__section">
           <!-- card item 1 -->
           <div class="card__item">
             <div class="group__layer">
-              <img class="card__img--top" src="../assets/img/home-img/carousel_img_1.webp" alt="">
+              <img class="card__img--top" src="../assets/img/home-img/contact__img-1.webp" alt="">
               <span>Add to cart</span>
             </div>
             <div class="card__body">
@@ -106,10 +123,10 @@
                 <div class="form__group">
                   <input class="input_design" type="number" name="dathang" value=1 min="1" max="50">
                   <a href="#" class="fancy">
-                      <span class="top-key"></span>
-                      <button class="text btn" type="submit">Order</button>
-                      <span class="bottom-key-1"></span>
-                      <span class="bottom-key-2"></span>
+                    <span class="top-key"></span>
+                    <button class="text btn" type="submit">Order</button>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
                   </a>
                 </div>
               </form>
@@ -118,7 +135,7 @@
           <!-- card item 2 -->
           <div class="card__item">
             <div class="group__layer">
-              <img class="card__img--top" src="../assets/img/home-img/carousel_img_2.webp" alt="">
+              <img class="card__img--top" src="../assets/img/home-img/contact__img-2.webp" alt="">
               <span>Add to cart</span>
             </div>
             <div class="card__body">
@@ -129,10 +146,10 @@
                 <div class="form__group">
                   <input class="input_design" type="number" name="dathang" value=1 min="1" max="50">
                   <a href="#" class="fancy">
-                      <span class="top-key"></span>
-                      <button class="text btn" type="submit">Order</button>
-                      <span class="bottom-key-1"></span>
-                      <span class="bottom-key-2"></span>
+                    <span class="top-key"></span>
+                    <button class="text btn" type="submit">Order</button>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
                   </a>
                 </div>
               </form>
@@ -141,7 +158,7 @@
           <!-- card item 3 -->
           <div class="card__item">
             <div class="group__layer">
-              <img class="card__img--top" src="../assets/img/home-img/carousel_img_3.webp" alt="">
+              <img class="card__img--top" src="../assets/img/home-img/contact__img-3.webp" alt="">
               <span>Add to cart</span>
             </div>
             <div class="card__body">
@@ -152,10 +169,10 @@
                 <div class="form__group">
                   <input class="input_design" type="number" name="dathang" value=1 min="1" max="50">
                   <a href="#" class="fancy">
-                      <span class="top-key"></span>
-                      <button class="text btn" type="submit">Order</button>
-                      <span class="bottom-key-1"></span>
-                      <span class="bottom-key-2"></span>
+                    <span class="top-key"></span>
+                    <button class="text btn" type="submit">Order</button>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
                   </a>
                 </div>
               </form>
@@ -164,7 +181,7 @@
           <!-- card item 4 -->
           <div class="card__item">
             <div class="group__layer">
-              <img class="card__img--top" src="../assets/img/home-img/carosel__img_4.jpg" alt="">
+              <img class="card__img--top" src="../assets/img/home-img/contact__img-4.webp" alt="">
               <span>Add to cart</span>
             </div>
             <div class="card__body">
@@ -175,10 +192,10 @@
                 <div class="form__group">
                   <input class="input_design" type="number" name="dathang" value=1 min="1" max="50">
                   <a href="#" class="fancy">
-                      <span class="top-key"></span>
-                      <button class="text btn" type="submit">Order</button>
-                      <span class="bottom-key-1"></span>
-                      <span class="bottom-key-2"></span>
+                    <span class="top-key"></span>
+                    <button class="text btn" type="submit">Order</button>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
                   </a>
                 </div>
               </form>
@@ -198,10 +215,10 @@
                 <div class="form__group">
                   <input class="input_design" type="number" name="dathang" value=1 min="1" max="50">
                   <a href="#" class="fancy">
-                      <span class="top-key"></span>
-                      <button class="text btn" type="submit">Order</button>
-                      <span class="bottom-key-1"></span>
-                      <span class="bottom-key-2"></span>
+                    <span class="top-key"></span>
+                    <button class="text btn" type="submit">Order</button>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
                   </a>
                 </div>
               </form>
@@ -221,17 +238,17 @@
                 <div class="form__group">
                   <input class="input_design" type="number" name="dathang" value=1 min="1" max="50">
                   <a href="#" class="fancy">
-                      <span class="top-key"></span>
-                      <button class="text btn" type="submit">Order</button>
-                      <span class="bottom-key-1"></span>
-                      <span class="bottom-key-2"></span>
+                    <span class="top-key"></span>
+                    <button class="text btn" type="submit">Order</button>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
                   </a>
                 </div>
               </form>
             </div>
           </div>
         </section>
-        <!-- Contact section -->
+        <!-- CONTACT section -->
         <section class="contact__section">
           <div class="contact__caption">
             <h2>Follow us on Instagram</h2>
@@ -243,17 +260,17 @@
             </div>
           </div>
           <div class="contact__img-group">
-            <img src="../assets/img/home-img/contact__img-1.webp" alt="">
-            <img src="../assets/img/home-img/contact__img-2.webp" alt="">
-            <img src="../assets/img/home-img/contact__img-3.webp" alt="">
-            <img src="../assets/img/home-img/contact__img-4.webp" alt="">
+            <img src="../assets/img/home-img/contact__img-1.webp" alt="img1">
+            <img src="../assets/img/home-img/contact__img-2.webp" alt="img2">
+            <img src="../assets/img/home-img/contact__img-3.webp" alt="img3">
+            <img src="../assets/img/home-img/contact__img-4.webp" alt="img4">
           </div>
         </section> 
       </div>
     </main>
-    <!-- FOOTER AREA -->
+    <!-- FOOTER -->
     <footer class="page__footer">
-      <!-- footer menu section -->
+      <!-- FOOTER MENU -->
       <section class="footer__menu">
         <div class="footer__img--logo">
           <img src="../assets/img/icon/Logo.webp" alt="">
@@ -266,10 +283,13 @@
           <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
       </section>
+      <!-- FOOTER C0NTACT INFO -->
       <section class="footer__contact--info">
+        <!-- CONTACT INFO LEFT -->
         <div class="contact--info-left">
           <div class="contact__des">
-            <p>Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
           <div class="contact__social">
             <div class="social__item">
@@ -292,11 +312,13 @@
             </div>
           </div>
         </div>
+        <!-- CONTACT INFO MIDDLE -->
         <div class="contact--info-middle">
           <img src="../assets/img/home-img/location.svg" alt="">
           <h4>Location</h4>
           <p>4736 Poe Lane, HOT SPRINGS, Montana-59845</p>
         </div>
+        <!-- CONTACT INFO RIGHT -->
         <div class="contact--info-right">
           <img src="../assets/img/home-img/phone.svg" alt="">
           <h4>Contact</h4>
@@ -304,11 +326,17 @@
           <p>contact@cakeshop.com</p>
         </div>
       </section>
+      <!-- FOOTER COPPYRIGHT -->
       <section class="footer__license">
-        <p>Copyright ©2022 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="#">Group 10</a></p>
+        <p>Copyright ©2022 All rights reserved <br> This template is made with <i class="fa-solid fa-heart"></i> by <a href="#">Group 10</a></p>
       </section>
     </footer>
   </section>
+  <!-- source file js -->
   <script src="../assets/js/home_page.js"></script>
+  <script>
+
+  </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
-/*   FILE : home_page.html
-       @IT Lecturer: Chau Thai-B2005731 , thaib2005731@student.ctu.edu.vn
+/*   FILE : home_page.css
+       @IT Lecturer: Thay Vu Duy Linh
+       Craetor : Chau Thai - B2005731, thaib2005731@student.ctu.edu.vn
        @Created : 16 - Nov - 2022  
 */
 /* setting default */
@@ -177,40 +178,6 @@ section#page{
 .header__nav--pc > .blog__dropdown:hover::after {
   width: 100%;
 }
-.header__nav--pc > .blog__dropdown > button {
-  outline: none;
-  border: none;
-  color: #fff;
-  background-color: transparent;
-  text-transform: uppercase;
-  padding: 32px 7px;
-  font-size: 15px;
-  line-height: 22.5px;
-}
-.blog__dropdown > .blog__content {
-  background-color: #fff;
-  position: absolute;
-  min-width: 182px;
-  opacity: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease-in-out 0s;
-}
-.blog__dropdown:hover .blog__content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.blog__content > .blog__link {
-  display: block;
-  padding: 12px 10px;
-  color: #000;
-  transition: 0.3s;
-}
-.blog__link:hover {
-  color: var(--mauvang);
-}
 /* END NAVIGATION PC */
 .page__header .header__nav .header__nav--respon{
   height: 54px;
@@ -286,8 +253,7 @@ section#page{
   background-size: cover;
   align-items: center;
 }
-
-.slide__section>.slide__caption {
+.slide__section .slide__caption {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
@@ -448,7 +414,7 @@ section#page{
 .video__section{
   background: url("/assets/img/home-img/video_bg.webp") no-repeat 50% 50%;
   background-size: cover;
-  width: 1140px;
+  max-width: 1140px;
   margin: auto !important;
   min-height: 668px;
   position: relative;
@@ -459,9 +425,7 @@ section#page{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  border-radius: 35%;
   padding: 20px 50px;
-  background-color:rgba(229,191,74,0.4);
 }
 .video__section > .icon__play > a{
   font-size: 90px;
@@ -768,6 +732,7 @@ section#page{
   align-items: center;
   color: #fff;
   padding: 10px 20px;
+  text-align: center;
 }
 .footer__license > p >i{
   color: #e5df4a;

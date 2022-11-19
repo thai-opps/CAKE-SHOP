@@ -1,3 +1,8 @@
+/*   FILE : about_page.css
+       @IT Lecturer: Thay Vu Duy Linh
+       Craetor : Chau Thai - B2005731, thaib2005731@student.ctu.edu.vn
+       @Created : 16 - Nov - 2022  
+*/
 /* setting default */
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=Poiret+One&display=swap");
 *{
@@ -173,42 +178,65 @@ section#page{
 .header__nav--pc > .blog__dropdown:hover::after {
   width: 100%;
 }
-.header__nav--pc > .blog__dropdown > button {
-  outline: none;
-  border: none;
+/* END NAVIGATION PC */
+.page__header .header__nav .header__nav--respon{
+  height: 54px;
+  background-color: var(--mauxam);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 20px;
+  position: relative;
+}
+.header__nav--respon .menu__btn{
+  padding: 10px;
+  background-color: #222;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgb(255 255 255 / 75%);
+  cursor: pointer;
+}
+.menu__btn span {
+  line-height: 1.188em;
   color: #fff;
-  background-color: transparent;
-  text-transform: uppercase;
-  padding: 32px 7px;
-  font-size: 15px;
-  line-height: 22.5px;
+  font-weight: 700;
+  text-shadow: 0 1px 3px #000;
 }
-.blog__dropdown > .blog__content {
-  background-color: #fff;
+.menu__btn i {
+  line-height: 1.188em;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 3px #000;
+}
+.menu__dropdown {
   position: absolute;
-  min-width: 182px;
-  opacity: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease-in-out 0s;
-}
-.blog__dropdown:hover .blog__content {
+  left: 0px;
+  top: 54px;
+  padding: 10px 20px;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  z-index: 9999;
   opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  flex-direction: column;
+  background-color: var(--mauxam);
+  display: none;
+  visibility: hidden;
 }
-.blog__content > .blog__link {
+.menu__dropdown .dropdown__link{
   display: block;
-  padding: 12px 10px;
-  color: #000;
-  transition: 0.3s;
+  padding: 10px ;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
-.blog__link:hover {
+.dropdown__link:hover {
+  background-color: gray;
   color: var(--mauvang);
 }
-/* END NAVIGATION PC */
-
+.show__menu{
+  display: block;
+  visibility: visible;
+}
 /* MAIN EREA */
 #page > .page__main{
   grid-area: main;
@@ -225,11 +253,10 @@ section#page{
   background-size: cover;
   align-items: center;
 }
-
-.slide__section>.slide__caption {
-  max-width: 1140px;
-  display: grid;
+.slide__section .slide__caption {
+  max-width: 1140px !important;
   margin: 0px auto !important;
+  display: grid;
   grid-template-columns: 1100px;
 }
 .slide__caption .slide__title{
@@ -242,7 +269,7 @@ section#page{
 .slide__caption .slide__btn{
   outline: none;
   color: #000;
-  border: 1px solid black;
+  border: 1px solid var(--mauvang);
   background-color: var(--mauvang);
   font-family: var(--fontJost);
   font-size: 15px;
@@ -333,9 +360,6 @@ section#page{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  border-radius: 35%;
-  padding: 20px 50px;
-  background-color:rgba(229,191,74,0.4);
 }
 .video__section > .icon__play > a{
   font-size: 90px;
@@ -544,7 +568,7 @@ section#page{
   grid-area: footer;
   display: grid;
   grid-template-rows: 1fr 1fr 85px;
-  width: 1140px;
+  max-width: 1140px;
   margin: auto !important;
 }
 .footer__menu{
@@ -568,7 +592,7 @@ section#page{
   grid-template-rows: 1fr 1fr;
   align-items: center;
   row-gap: 10px;
-  padding: 10px 12px;
+  padding: 10px 20px;
 }
 .contact--info-left > .contact__des{
   color: #fff;
@@ -581,8 +605,9 @@ section#page{
   column-gap: 10px;
 }
 .contact--info-left > .contact__social > .social__item{
-  padding: 14px 36px 13px 39px;
-  border: 1px solid #363636;
+  padding:10px;
+  text-align: center;
+  border: 2px solid #363636;
   cursor: pointer;
 }
 .contact--info-left > .contact__social > .social__item:hover{
@@ -640,48 +665,15 @@ section#page{
   justify-content: center;
   align-items: center;
   color: #fff;
+  padding: 10px 20px;
+  text-align: center;
 }
 .footer__license > p >i{
   color: #e5df4a;
 }
 .footer__license > p >a{
   color: skyblue;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 28.8px;
   font-family: "Poiret One";
-}
-/* RESPONSIVE LAYOUT */
-@media only screen and (max-width:575px){
-  /* header banner */
-  .header__banner > .banner__social-icon{
-    display: none;
-  }
-  .header__banner > .banner__info{
-    display: none;
-  }
-  .header__banner > .banner__logo{
-    padding: 0%;
-  }
-  .header__nav > .header__nav--pc{
-    display: none;
-  }
-
-}
-@media only screen and (576px <= width <= 991px){
-  .header__banner > .banner__info{
-    display: none;
-  }
-  .header__nav > .header__nav--pc{
-    display: none;
-  }
-}
-@media only screen and (992px <= width <= 1366px){
-  .header__nav > .header__nav--mobile{
-    display: none;
-  }
-}
-@media screen and (min-width:1367px) {
-  .header__nav > .header__nav--mobile{
-    display: none;
-  }
 }

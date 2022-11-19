@@ -1,3 +1,8 @@
+/*   FILE : login.css
+       @IT Lecturer: Thay Vu Duy Linh
+       Craetor : Chau Thai - B2005731, thaib2005731@student.ctu.edu.vn
+       @Created : 16 - Nov - 2022  
+*/
 *{
     padding: 0;
     margin: 0;
@@ -30,7 +35,7 @@ body{
     border-radius: 30px;
     padding: 25px;
 }
-@media only screen and (max-width:992px ){
+@media only screen and (max-width:1100px ){
     #form_wrapper {
         transform: translate(-50%,-50%) !important;
     }

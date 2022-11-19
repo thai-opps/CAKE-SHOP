@@ -1,7 +1,17 @@
 <!--   FILE : blog_page.html
-       @IT Lecturer: Chau Thai-B2005731 , thaib2005731@student.ctu.edu.vn
+       @IT Lecturer: Thay Vu Duy Linh
+       Craetor : Chau Thai - B2005731, thaib2005731@student.ctu.edu.vn
        @Created : 16 - Nov - 2022  
- -->
+
+      Tai lieu tham khao :
+       + https://www.w3schools.com/
+       + https://stackoverflow.com/
+       + Tailieu3 - Jon Duckett, 2014- JavaScript and JQuery.Interactive Front-End Web Development
+       + Tailieu2--2017__Web Design with HTML & CSS3 - Comprehensive, 8 edition.pdf
+       + Tailieu1-2018-Learning Web Design _ A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics.pdf
+       + https://css-tricks.com/
+       + Giao trinh CT188 CTU
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- icon trang web -->
   <link rel="shortcut icon" type="img/png" href="../assets/img/icon/favicon.webp">
-  <!-- css shared-->
+  <!-- css custom-->
   <link rel="stylesheet" href="../assets/css/blog_page.css">
   <link rel="stylesheet" href="../assets/css/blog_respon.css">
   <!-- font Awesome -->
@@ -52,23 +62,25 @@
       </div>
       <!-- navigation -->
       <div class="header__nav">
-        <!-- nav for desktop display -->
+        <!-- large devide width -->
         <nav class="header__nav--pc">
-          <!-- nav links -->
           <a class="nav__link" href="home_page.html">Home</a>
           <a class="nav__link" href="cakes_page.html">Cakes</a>
           <a class="nav__link" href="about_page.html">About</a>
           <a class="nav__link" href="blog_page.html">BLOG</a>
           <a class="nav__link" href="contact_page.html">Contact</a>
         </nav>
-        <!-- nav for width <= 768px -->
+        <!-- small device width -->
         <nav class="header__nav--respon">
+          <!-- menu button -->
           <div class="menu__btn">
+            <!-- click to show menu content dropdown -->
             <a onclick="showMenu()">
               <span>MENU</span>
               <i class="fa-solid fa-bars"></i>
             </a>
           </div>
+          <!-- menu content -->
           <div id="menuBTN" class="menu__dropdown">
             <a class="dropdown__link" href="home_page.html">Home</a>
             <a class="dropdown__link" href="cakes_page.html">Cakes</a>
@@ -79,8 +91,9 @@
         </nav>
       </div>
     </header>
+    <!-- MAIN -->
     <main class="page__main">
-      <!-- slide section -->
+      <!-- SLIDE -->
       <section class="slide__section">
         <div class="slide__caption">
           <div class="slide__animate">
@@ -88,10 +101,13 @@
           </div>
         </div>
       </section>
-      <!-- -->
+      <!-- CONTAINER TO CENTER CONTENT -->
       <div class="container">
+        <!-- BLOG MAIN CONTENT -->
         <section class="blog__main-content">
+          <!-- BLOG CONTENT LEFT -->
           <div class="blog__left-content">
+            <!-- BLOG CARD ITEM 1 -->
             <div class="blog__card-item">
               <img src="../assets/img/blog__img1.jpg" alt="Blog img 1">
               <div class="card__body">
@@ -114,6 +130,7 @@
                 </div>
               </div>
             </div>
+            <!-- BLOG CARD ITEM 2 -->
             <div class="blog__card-item">
               <img src="../assets/img/blog__img2.jpg" alt="Blog img 1">
               <div class="card__body">
@@ -136,6 +153,7 @@
                 </div>
               </div>
             </div>
+            <!-- BLOG CARD ITEM 3 -->
             <div class="blog__card-item">
               <img src="../assets/img/blog__img3.jpg" alt="Blog img 1">
               <div class="card__body">
@@ -158,6 +176,7 @@
                 </div>
               </div>
             </div>
+            <!-- BLOG CARD ITEM 4 -->
             <div class="blog__card-item">
               <img src="../assets/img/blog__img4.jpg" alt="Blog img 1">
               <div class="card__body">
@@ -181,6 +200,7 @@
               </div>
             </div>
           </div>
+          <!-- BLOG SIDEBAR RIGHT -->
           <div class="blog__sidebar--right">
             <div class="form__search">
               <form action="#" method="post">
@@ -270,14 +290,16 @@
               </div>
               <form class="newsletter__form" action="#" method="post">
                 <input type="email" name="email" id="Email" placeholder="Enter email">
-                <button type="submit">SUBSCRI</button>
+                <button type="submit">SUBSCRIBE</button>
               </form>
             </div>
           </div>
         </section>
       </div>
     </main>
+    <!-- FOOTER -->
     <footer class="page__footer">
+      <!-- footer menu -->
       <section class="footer__menu">
         <div class="footer__img--logo">
           <img src="../assets/img/icon/Logo.webp" alt="">
@@ -292,6 +314,7 @@
       </section>
       <!-- footer contact info -->
       <section class="footer__contact--info">
+        <!-- left info -->
         <div class="contact--info-left">
           <div class="contact__des">
             <p>Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua. Ut enim ad
@@ -318,11 +341,13 @@
             </div>
           </div>
         </div>
+        <!-- middle info -->
         <div class="contact--info-middle">
           <img src="../assets/img/home-img/location.svg" alt="">
           <h4>Location</h4>
           <p>4736 Poe Lane, HOT SPRINGS, Montana-59845</p>
         </div>
+        <!-- right info -->
         <div class="contact--info-right">
           <img src="../assets/img/home-img/phone.svg" alt="">
           <h4>Contact</h4>
@@ -330,14 +355,18 @@
           <p>contact@cakeshop.com</p>
         </div>
       </section>
-      <!--  -->
+      <!-- footer coppy right -->
       <section class="footer__license">
-        <p>Copyright ©2022 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a
-            href="#">Group 10</a></p>
+        <p>Copyright ©2022 All rights reserved <br> This template is made with <i class="fa-solid fa-heart"></i> by <a href="#">Group 10</a></p>
       </section>
     </footer>
   </section>
-  <script async src="../assets/js/home_page.js"></script>
+  <!-- script file home.js -->
+  <script src="../assets/js/home_page.js"></script>
+  <script src="../assets/js/cake_page.js"></script>
+  <script>
+
+  </script>
 </body>
 
 </html>
