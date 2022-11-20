@@ -54,6 +54,7 @@
           </div>
           <!-- shopping cart -->
           <div class="shopping__cart">
+            <p class="no__order-item">0</p>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
           </div>
         </div>
@@ -113,11 +114,12 @@
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/contact__img-1.webp" alt="">
-              <span>Add to cart</span>
+              <a href="" class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
+              <p class="item__id" hidden>001</p>
               <a href="#" class="card__title">Cashmere Tank + Bag</a>
-              <span class="card__price">$74.00</span>
+              <span class="card__price">74000</span>
               <form action="#" method="post">
                 <p>Quantity:</p>
                 <div class="form__group">
@@ -136,11 +138,12 @@
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/contact__img-2.webp" alt="">
-              <span>Add to cart</span>
+              <a href="" class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
+              <p class="item__id" hidden>002</p>
               <a href="#" class="card__title">Delightful Lemon</a>
-              <span class="card__price">$35.00</span>
+              <span class="card__price">35000</span>
               <form action="#" method="post">
                 <p>Quantity:</p>
                 <div class="form__group">
@@ -159,11 +162,12 @@
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/contact__img-3.webp" alt="">
-              <span>Add to cart</span>
+              <a href="" class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
+              <p class="item__id" hidden>003</p>
               <a href="#" class="card__title">Sweet Suprise</a>
-              <span class="card__price">$26.00</span>
+              <span class="card__price">26000</span>
               <form action="#" method="post">
                 <p>Quantity:</p>
                 <div class="form__group">
@@ -182,11 +186,12 @@
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/contact__img-4.webp" alt="">
-              <span>Add to cart</span>
+              <a href="" class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
+              <p class="item__id" hidden>004</p>
               <a href="#" class="card__title">Sweet Suprise</a>
-              <span class="card__price">$61.00</span>
+              <span class="card__price">61000</span>
               <form action="#" method="post">
                 <p>Quantity:</p>
                 <div class="form__group">
@@ -205,11 +210,12 @@
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/carosel__img_5.jpg" alt="">
-              <span>Add to cart</span>
+              <a href="" class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
+              <p class="item__id" hidden>005</p>
               <a href="#" class="card__title">Sweet Suprise</a>
-              <span class="card__price">$51.00</span>
+              <span class="card__price">52000</span>
               <form action="#" method="post">
                 <p>Quantity:</p>
                 <div class="form__group">
@@ -228,11 +234,12 @@
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/carosel__img_6.jpg" alt="">
-              <span>Add to cart</span>
+              <a href="" class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
+              <p class="item__id" hidden>006</p>
               <a href="#" class="card__title">Sweet Suprise</a>
-              <span class="card__price">$48.00</span>
+              <span class="card__price">48000</span>
               <form action="#" method="post">
                 <p>Quantity:</p>
                 <div class="form__group">
@@ -334,8 +341,13 @@
   </section>
   <!-- source file js -->
   <script src="../assets/js/home_page.js"></script>
+  <script src="../assets/js/cake_page.js"></script>
   <script>
-
+    const prices = document.querySelectorAll('.card__price');
+    prices.forEach(item =>{
+      item.innerText = Number(item.innerText).toLocaleString('de-DE',{style: 'currency', currency: 'VND'});
+    })
+    window.onload = loadShoppingCart;
   </script>
 </body>
 

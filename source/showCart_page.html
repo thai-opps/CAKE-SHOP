@@ -21,7 +21,73 @@
   <title>Show cart</title>
   <link rel="shortcut icon" type="img/png" href="../assets/img/icon/favicon.webp">
 </head>
+<style>
+  *{padding: 0; margin: 0%; box-sizing: border-box;}
+  .container{
+    width: 100% !important;
+    margin: auto !important;
+    background-color: #0A0A0A;
+    color: #fff !important;
+    height: 100vh;
+  }
+  h1{
+    color: #fff;
+    text-align: center;
+    padding: 50px 0px;
+  }
+  a{
+    text-align: center;
+    text-decoration: none;
+    color: red;
+  }
+  thead th{
+    padding: 20px 0px;
+  }
+  .list__items{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto !important;
+  }
+  .list__head{
+    border: 1px solid skyblue;
+  }
+  :is(.list__foot, .list__body) :is(td, th){
+    border: 1px solid skyblue;
+    padding: 3px;
+  }
+  /* .list__body tr:nth-child(even){
+    background-color: #ddd;
+  } */
+  .list__body tr td:not(:nth-child(3)){
+    text-align: center;
+  }
+  .list__foot tr td{
+    text-align: center;
+    font-weight: bold;
+  }
+  .list__foot tr td:first-child{
+    text-align: right;
+    padding-right: 10px;
+  }
+  .list__foot tr:first-child td:last-child{
+    background: url(../assets/img/icon/favicon.webp) center center border-box no-repeat;
+    background-size: 65%;
+  }
+</style>
 <body>
-
+  <div class="container">
+    <h1>Your cart items</h1>
+    <table class="list__items">
+      <thead class="list__head"></thead>
+      <tbody class="list__body"></tbody>
+      <tfoot class="list__foot"></tfoot>
+    </table>
+  </div>
+  <script src="../assets/js/cake_page.js"></script>
+  <script>
+    window.addEventListener('load',showCart,false);
+  </script>
 </body>
+
 </html>

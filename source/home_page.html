@@ -50,7 +50,9 @@
           <div class="user__account">
             <a href="login_page.html"><i class="fa-regular fa-user"></i></a>
           </div>
+          <!-- shopping cart -->
           <div class="shopping__cart">
+            <p class="no__order-item">0</p>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
           </div>
         </div>
@@ -335,7 +337,11 @@
     </footer>
   </section>
   <!-- SCRIPT -->
-  <script async src="../assets/js/home_page.js"></script>
+  <script src="../assets/js/home_page.js"></script>
+  <script src="../assets/js/cake_page.js"></script>
+  <script>
+    window.onload = loadShoppingCart;
+  </script>
 </body>
 
 </html>
