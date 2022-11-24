@@ -16,6 +16,14 @@
   --mauxam: #4c4c4c;
   --fontJost: "Jost", sans-serif;
   --fontPoiret: "Poiret One";
+  --light: hsl(220, 50%, 90%);
+  --primary: hsl(255, 30%, 55%);
+  --focus: hsl(210, 90%, 50%);
+  --border-color: hsla(0, 0%, 100%, .2);
+  --global-background: hsl(220, 25%, 10%);
+  --background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+  --shadow-1: hsla(236, 50%, 50%, .3);
+  --shadow-2: hsla(236, 50%, 50%, .4);
 }
 html{
   font-family: var(--fontJost);
@@ -326,6 +334,7 @@ section#page{
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #eee;
+  box-shadow: 2.5px 2.5px 10px 0px var(--shadow-2);
 }
 
 .card__item>.group__layer {
@@ -391,31 +400,14 @@ section#page{
   color: #fff;
   margin: 10px 0px;
 }
-.form__group{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  column-gap: 10px;
-}
-.form__group > input{
-  border: none;
-  height: 25px;
-  border-radius: 5px;
-  padding: 20px;
-  outline: 1px solid skyblue;
-  background: transparent;
-  color: #fff;
-  width: 100%;
-  cursor: pointer;
-}
 .fancy {
-  background-color: transparent;
+  background-color: var(--mauvang);
   border: 2px solid var(--mauvang);
   border-radius: 5px;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin: 0;
@@ -458,7 +450,7 @@ section#page{
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--mauvang);
+  color: #fff;
   cursor: pointer;
  }
  
@@ -468,7 +460,7 @@ section#page{
   top: -2px;
   left: 0.625rem;
   position: absolute;
-  background: #0A0A0A;
+  background: transparent;
   transition: width 0.5s ease-out, left 0.3s ease-out;
  }
  
@@ -478,24 +470,24 @@ section#page{
   right: 1.875rem;
   bottom: -2px;
   position: absolute;
-  background: #0A0A0A;
+  background: transparent;
   transition: width 0.5s ease-out, right 0.3s ease-out;
  }
  
  .fancy .bottom-key-2 {
   height: 2px;
-  width: 0.625rem;
-  right: 0.625rem;
+  width: 10px;
+  right: 10px;
   bottom: -2px;
   position: absolute;
-  background: #0A0A0A;
+  background: transparent;
   transition: width 0.5s ease-out, right 0.3s ease-out;
  }
  
  .fancy:hover {
   color: white;
   border-radius:5px ;
-  background-color: var(--mauvang);
+  background-color: #0A0A0A;
  }
  
  .fancy:hover::before {
@@ -504,6 +496,7 @@ section#page{
  }
  
  .fancy:hover .text {
+  pointer-events: none;
   color: white;
   padding-left: 1.5em;
  }

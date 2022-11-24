@@ -10,12 +10,12 @@ function loadShoppingCart(){
     const selectedItems = (evt) => {
         const linkClicked = evt.target;
         // lấy id của linkClicked
-        alert("Id item: "+ linkClicked.parentElement.nextElementSibling.children[0].textContent)
+        alert("Id item: "+ linkClicked.parentElement.children[0].textContent)
         if(typeof Storage !== undefined){
             let newItem = {
-                id: linkClicked.parentElement.nextElementSibling.children[0].textContent,
-                name: linkClicked.parentElement.nextElementSibling.children[1].textContent,
-                price: linkClicked.parentElement.nextElementSibling.children[2].textContent,
+                id: linkClicked.parentElement.children[0].textContent,
+                name: linkClicked.parentElement.children[1].textContent,
+                price: linkClicked.parentElement.children[2].textContent,
                 quantity: 1
             };
             if(JSON.parse(localStorage.getItem('cartItems')) === null){

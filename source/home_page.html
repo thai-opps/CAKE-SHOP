@@ -134,37 +134,40 @@
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/carousel_img_1.webp" alt="">
-              <span>Add to cart</span>
+              <a href="" hidden class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
-              <a href="#" class="card__title">Cashmere Tank + Bag</a>
-              <span class="card__price">$98.00</span>
+              <p class="item__id" hidden>001</p>
+              <a href="#" class="card__title">Sweet Suprise</a>
+              <span class="card__price">46000</span>
             </div>
           </div>
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/carousel_img_2.webp" alt="">
-              <span>Add to cart</span>
+              <a href="" hidden class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
-              <a href="#" class="card__title">Delightful Lemon</a>
-              <span class="card__price">$57.00</span>
+              <p class="item__id" hidden>002</p>
+              <a href="#" class="card__title">Sweet Suprise</a>
+              <span class="card__price">63000</span>
             </div>
           </div>
           <div class="card__item">
             <div class="group__layer">
               <img class="card__img--top" src="../assets/img/home-img/carousel_img_3.webp" alt="">
-              <span>Add to cart</span>
+              <a href="" hidden class="add__cart">Add to cart</a>
             </div>
             <div class="card__body">
+              <p class="item__id" hidden>003</p>
               <a href="#" class="card__title">Sweet Suprise</a>
-              <span class="card__price">$66.00</span>
+              <span class="card__price">97000</span>
             </div>
           </div>
         </section>
         <section class="video__section">
           <div class="icon__play">
-            <a href="#">
+            <a href="https://www.youtube.com/watch?v=up68UAfH0d0">
               <i class="fa-regular fa-circle-play"></i>
             </a>
           </div>
@@ -340,7 +343,11 @@
   <script src="../assets/js/home_page.js"></script>
   <script src="../assets/js/cake_page.js"></script>
   <script>
-    window.onload = loadShoppingCart;
+    const prices = document.querySelectorAll('.card__price');
+    prices.forEach(item =>{
+      item.innerText = Number(item.innerText).toLocaleString('de-DE',{style: 'currency', currency: 'VND'});
+    })
+    window.onload= loadShoppingCart;
   </script>
 </body>
 

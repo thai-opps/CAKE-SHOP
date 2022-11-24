@@ -57,7 +57,7 @@
   .page__header  .header__nav--pc{display: none;}
   /* main */
   .page__main>.slide__section {height: 300px;}
-  .slide__section .slide__caption {max-width: 100%;grid-template-columns: 1fr 1fr;align-self: start !important;}
+  .slide__section .slide__caption {max-width: 100%;grid-template-columns: 540px;align-self: start !important;}
   .slide__caption .slide__title{font-size: 58px;font-weight: 300;color: #fff;margin-bottom: 10px;}
   /* main container */
   .container {max-width: 540px;}
