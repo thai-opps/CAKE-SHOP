@@ -431,7 +431,7 @@ section#page{
 }
 /* Video section */
 .video__section{
-  background: url("/assets/img/home-img/video_bg.webp") no-repeat 50% 50%;
+  background: url("../img/home-img/video_bg.webp") no-repeat 50% 50%;
   background-size: cover;
   max-width: 1140px;
   margin: auto !important;

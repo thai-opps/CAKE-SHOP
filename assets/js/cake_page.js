@@ -1,9 +1,12 @@
+// Hàm kiểm tta sản phẩm đã tồn tại trong giỏ hàng chưa
 function isExistedInCart(item, arrCart){
     let myIndex = -1;
     arrCart.forEach((itemCart, index)=>{
         if(item.id == itemCart.id)  myIndex = index;
     });
     return myIndex;
+    // Nếu chưa thì trả về -1
+    // Nếu đã tồn tại thì trả về vị trí sản phẩm trong mảng [products]
 }
 function loadShoppingCart(){
     let products = [] ;//chứa các mặt hàng hiện có của giỏ hàng
@@ -12,30 +15,45 @@ function loadShoppingCart(){
         // lấy id của linkClicked
         alert("Id item: "+ linkClicked.parentElement.children[0].textContent)
         if(typeof Storage !== undefined){
+            // Nếu browser hổ trợ LocalStorage
+
+            // Tạo đối tượng sản phẩm
             let newItem = {
-                id: linkClicked.parentElement.children[0].textContent,
-                name: linkClicked.parentElement.children[1].textContent,
-                price: linkClicked.parentElement.children[2].textContent,
-                quantity: 1
+                id: linkClicked.parentElement.children[0].textContent, // Lấy id 
+                name: linkClicked.parentElement.children[1].textContent, // Lấy tên sản phẩm
+                price: linkClicked.parentElement.children[2].textContent, // Lấy giá sản phẩm
+                quantity: 1 // Khởi tạo số lượng sản phẩm bằng 1
             };
             if(JSON.parse(localStorage.getItem('cartItems')) === null){
-                products.push(newItem);
-                localStorage.setItem('cartItems', JSON.stringify(products));
+                // Nếu giỏ hàng cartItems chưa tồn tại
+                products.push(newItem); // thêm đối tượng sản phẩm vào giỏ hàng 
+                localStorage.setItem('cartItems', JSON.stringify(products)); 
+                // Tao giỏ hàng cartItems 
+                // convert object -> json
+                // Thêm dữ liệu vào giỏ hàng
                 window.location.reload();
-            }// localStorage exist
+                // Tải lại trang
+
+            }
+            // Nếu localStorage đã tồn tại
             else{
+                // Lấy dữ liệu giỏ hàng từ localStorage 
                 const products = JSON.parse(localStorage.getItem('cartItems'));
+                // Lấy vị trí của đối tượng sản phẩm mới tạo trong mạng [] products
                 let index = isExistedInCart(newItem,products);
+                // Nếu sản phẩm đã tồn tại
                 if(index >=0){
-                    products[index].quantity++;
+                    products[index].quantity++; // tăng số lượng lên 1
                     localStorage.setItem('cartItems', JSON.stringify(products));
                     window.location.reload();
+                    // cập nhật giỏ hàng
                 }
+                // chưa tồn tại thì thêm vào giỏ hàng
                 else products.push(newItem);
+                // cập nhật lại giỏ hàng
                 localStorage.setItem('cartItems', JSON.stringify(products));
                 window.location.reload();
             }
-
         }else{
             alert( "Localstorage is not working on your browser !");
         }
@@ -92,6 +110,7 @@ function showCart(){
         tblFoot.innerHTML = footColumns;
     }
 }
+// Xóa sản phẩm trong giỏ hàng
 function deleteCart(evt){
     let updateProducts = [];
     let customerCart = JSON.parse(localStorage.getItem('cartItems'));
@@ -103,6 +122,7 @@ function deleteCart(evt){
     localStorage.setItem('cartItems',JSON.stringify(updateProducts));
     window.location.reload();
 }
+// Chuyễn đổi đơn vị tiền tệ Việt nam
 const formatCurrency = (amount, locale="vi-VN") => {
     return new Intl.NumberFormat(locale,{
         style:'currency',
